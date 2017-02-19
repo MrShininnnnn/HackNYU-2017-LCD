@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" ang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>HACKNYU</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Lung Cancer Detection" />
+		<meta name="keywords" content="Lung Cancer Detection, Hackson, HACKNYU" />
+	  	
+	  	<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+		<!-- Flexslider -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+		<!-- Default Theme Style -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<!-- Modernizr JS -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+	</head>
+
+	<body>
+		
+		<!-- Loader -->
+		<div class="fh5co-loader"></div>
+		
+		<div id="fh5co-page">
+			<section id="fh5co-header">
+				<div class="container">
+					<nav role="navigation">
+						<ul class="pull-left left-menu">
+							<li><a href="#">What</a></li>
+							<li><a href="#">Why</a></li>
+							<li><a href="#">How</a></li>
+						</ul>
+						<h1 id="fh5co-logo"><a href="{{url_for('main')}}">LCD<span>.</span></a></h1>
+						<ul class="pull-right right-menu">
+							<li><a href="#">Login</a></li>
+							<li class="fh5co-cta-btn"><a href="#">Sign up</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<!-- #fh5co-header -->
+
+			<section id="fh5co-hero" class="js-fullheight img-responsive" style="background-image: url(static/images/1.jpg)" data-next="yes">
+				<div class="fh5co-overlay"></div>
+				<div class="container">
+					<div class="fh5co-intro js-fullheight">
+						<div class="fh5co-intro-text">
+							<div class="fh5co-left-position">
+								<h2 class="animate-box">Lung Cancer Detection</h2>
+								<p class="animate-box"><a href="https://www.youtube.com/watch?v=9s0ZbhJOWTA" class="btn btn-outline popup-vimeo btn-video"><i class="icon-play2"></i> Lung Cancer</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fh5co-learn-more animate-box">
+					<a href="#" class="scroll-btn">
+						<span class="text">Explore more about us</span>
+						<span class="arrow"><i class="icon-chevron-down"></i></span>
+					</a>
+				</div>
+			</section>
+			<!-- END #fh5co-hero -->
+			<section id="fh5co-projects">
+				<div class="container">
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<h2 class="fh5co-lead animate-box">Lung Cancer Detection</h2>
+							<p class="fh5co-sub-lead animate-box">LCD is equivalent to an experienced CT specialist with 20 years of professional training. Its reliance, availability and efficiency and accelerate diagnosis process and elevate survival chance, eventually disrupting the cancer diagnosis and prognosis industry.</p>
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+							<a href="{{ url_for('static', filename='images/img_1.jpg')}}" class="fh5co-project-item image-popup">
+								<img src="{{ url_for('static', filename='images/img_1.jpg')}}" alt="Image" class="img-responsive">
+								<div class="fh5co-text">
+									<h2>Lung Cancer Diagnosis</h2>
+									<p>1/4 cancer deaths are from lung cancer. Early diagnosis multiplies the survival rates.</p>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+							<a href="{{ url_for('static', filename='images/img_2.jpg')}}" class="fh5co-project-item image-popup">
+								<img src="{{ url_for('static', filename='images/img_2.jpg')}}" alt="Image" class="img-responsive">
+								<div class="fh5co-text">
+									<h2>Machine Learning</h2>
+									<p>Pioneer deep learning method, proudly developed by NYU students. #HackNYU#</p>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+							<a href="{{ url_for('static', filename='images/img_3.jpg')}}" class="fh5co-project-item image-popup">
+								<img src="{{ url_for('static', filename='images/img_3.jpg')}}" alt="Image" class="img-responsive">
+								<div class="fh5co-text">
+									<h2>Self-Examination</h2>
+									<p>It's simple and easry - just upload CT scans and get the results within minutes.</p>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+							<a href="{{ url_for('static', filename='images/img_4.jpg')}}" class="fh5co-project-item image-popup">
+								<img src="{{ url_for('static', filename='images/img_4.jpg')}}" alt="Image" class="img-responsive">
+								<div class="fh5co-text">
+									<h2>Reliance</h2>
+									<p>Fully functioning diagnostic tool after extensive training and validations.</p>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+							<a href="{{ url_for('static', filename='images/img_5.jpg')}}" class="fh5co-project-item image-popup">
+								<img src="{{ url_for('static', filename='images/img_5.jpg')}}" alt="Image" class="img-responsive">
+								<div class="fh5co-text">
+									<h2>Efficiency</h2>
+									<p>Identify and analyze cancer modules simply within five minutes. </p>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+							<a href="{{ url_for('static', filename='images/img_6.jpg')}}" class="fh5co-project-item image-popup">
+								<img src="{{ url_for('static', filename='images/img_6.jpg')}}" alt="Image" class="img-responsive">
+								<div class="fh5co-text">
+									<h2>24/7 Available</h2>
+									<p>Anytime. Anywhere. For doctors, patients and everyone else.</p>
+								</div>
+							</a>
+						</div>
+						
+						
+					</div>
+				</div>
+			</section>
+			<!-- END #fh5co-projects -->
+
+			<section id="fh5co-features">
+				<div class="container">
+					<div class="row text-center row-bottom-padded-md">
+						<div class="col-md-8 col-md-offset-2">
+							<figure class="fh5co-devices animate-box"><img src="{{ url_for('static', filename='images/img_devices.png')}}" alt="Free HTML5 Bootstrap Template" class="img-responsive"></figure>
+							<h2 class="fh5co-lead animate-box">Perfect Display in All Devices</h2>
+						</div>
+					</div>
+					
+				</div>
+			</section>	
+
+			<!-- END #fh5co-features -->
+
+
+			<section id="fh5co-features-2">
+				<div class="container">
+					<div class="col-md-6 col-md-push-6">
+						<figure class="fh5co-feature-image animate-box">
+							<img src="{{ url_for('static', filename='images/macbook.png')}}" alt="Free HTML5 Bootstrap Template by FREEHTML5.co">
+						</figure>
+					</div>
+					<div class="col-md-6 col-md-pull-6">
+						<span class="fh5co-label animate-box">More</span>
+						<h2 class="fh5co-lead animate-box">Superb Features</h2>
+						<div class="fh5co-feature">
+							<div class="fh5co-icon animate-box"><i class="icon-check2"></i></div>
+							<div class="fh5co-text animate-box">
+								<h3>Cost-cutting</h3>
+								<p>LCD enables hospitals to reduce headcount for CT specialists in residence while serving more patients. The fixed purchasing cost of LCD is more cost-effective as compared with exponentially growing salaries for doctors over time. </p>
+							</div>
+						</div>
+						<div class="fh5co-feature">
+							<div class="fh5co-icon animate-box"><i class="icon-check2"></i></div>
+							<div class="fh5co-text animate-box">
+								<h3>Time-saving</h3>
+								<p>LCD only requires 2 weeks of deep learning whilst human doctors need 11-17 years of professional training. Meanwhile with the assistance of LCD, CT specialists can focus on highlighted cancer modules and reduce consultation time for each patient without compromising accuracy.</p>
+							</div>
+						</div>
+						<div class="fh5co-feature">
+							<div class="fh5co-icon animate-box"><i class="icon-check2"></i></div>
+							<div class="fh5co-text animate-box">
+								<h3>User-friendly</h3>
+								<p>LCD has an elegant and concise user interface, with only one action needed from the users - upload CT scans. The clear instruction and high process efficiency illustrate the beauty of machine learning in real life, showcasing technology’s contributions on healthcare.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END #fh5co-features-2 -->
+			
+			<section id="fh5co-testimonials">
+				<div class="container">
+					<div class="row row-bottom-padded-sm">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<div class="fh5co-label animate-box">Team</div>
+							<h2 class="fh5co-lead animate-box">Three NYU Students at HACKNYU</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center animate-box">
+							<div class="flexslider">
+						  		<ul class="slides">
+								   <li>
+								      <blockquote>
+								      	<p>CILVR lab member. </p>
+								      	<p><cite>&mdash; Yichen Gong</cite></p>
+								      </blockquote>
+								   </li>
+								   <li>
+								    	<blockquote>
+								      	<p>Content Editor.</p>
+								      	<p><cite>&mdash; Yamei</cite></p>
+								      </blockquote>
+								   </li>
+								   <li>
+								    	<blockquote>
+								      	<p>Website Developer.</p>
+								      	<p><cite>&mdash; Shining</cite></p>
+								      </blockquote>
+								   </li>
+								</ul>
+							</div>
+							<div class="flexslider-controls">
+							   <ol class="flex-control-nav">
+							      <li class="animate-box"><img src="{{ url_for('static', filename='images/person4.jpg')}}" alt="Free HTML5 Bootstrap Template by FREEHTML5.co"></li>
+							      <li class="animate-box"><img src="{{ url_for('static', filename='images/person2.jpg')}}" alt="Free HTML5 Bootstrap Template by FREEHTML5.co"></li>
+							      <li class="animate-box"><img src="{{ url_for('static', filename='images/person3.jpg')}}" alt="Free HTML5 Bootstrap Template by FREEHTML5.co"></li>
+							   </ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END #fh5co-testimonials -->
+
+			<section id="fh5co-subscribe">
+				<div class="container animate-box">
+			
+					<h3 class="animate-box"><label for="upload">Upload CT Images</label></h3>
+					<form action="/loading.html">
+						<input type="file" id="fileinput" multiple="multiple" accept>
+						<input type="submit" value="Submit" class="btn btn-primary" href="{{ url_for('loading')}}" >
+						<a href="{{ url_for('static', filename='images/img_4.jpg')}}" class="fh5co-project-item image-popup">
+
+					</form>
+
+				</div>
+			</section>
+			<!-- END #fh5co-subscribe -->
+
+			<footer id="fh5co-footer">
+				<div class="container">
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Company</h3>
+								<ul class="fh5co-links">
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Feature Tour</a></li>
+									<li><a href="#">Pricing</a></li>
+									<li><a href="#">Business</a></li>
+									<li><a href="#">Our Team</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Support</h3>
+								<ul class="fh5co-links">
+									<li><a href="#">Knowledge Base</a></li>
+									<li><a href="#">24/7 Call Support</a></li>
+									<li><a href="#">Video Demos</a></li>
+									<li><a href="#">Terms of Use</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Contact Us</h3>
+								<p>
+									<a href="yg1053@nyu.edu"></a> yg1053@nyu.edu<br>
+									6 MetroTech Center,<br>
+									Brooklyn, NY 11201<br>
+									<a href="tel:+123456789">+1 (234) 5678901</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Follow Us</h3>
+								<ul class="fh5co-social">
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-google-plus"></i></a></li>
+									<li><a href="#"><i class="icon-instagram"></i></a></li>
+									<li><a href="#"><i class="icon-youtube-play"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+				<div class="fh5co-copyright animate-box">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="fh5co-left"><small>&copy; 2017 <a href="index.html">HACKNYU</a> LCD. All Rights Reserved.</small></p>
+								<p class="fh5co-right"><small class="fh5co-right">Lung Cancer Detection<a href="#" target="_blank" title="HACKNYU"> HACKNYU</a> - Made by <a href="#" title="HACKNYU" target="_blank">Winner</a></small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- END #fh5co-footer -->
+		</div>
+		<!-- END #fh5co-page -->
+		
+		<!-- jQuery -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+		<!-- jQuery Easing -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+		<!-- Bootstrap -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+		<!-- Waypoints -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
+		<!-- Flexslider -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.flexslider-min.js')}}"></script>
+		<!-- Magnific Popup -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+		<script type=text/javascript src="{{ url_for('static', filename='js/magnific-popup-options.js')}}"></script>
+		<!-- Main JS (Do not remove) -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+	</body>
+</html>
+

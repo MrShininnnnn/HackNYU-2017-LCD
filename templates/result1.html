@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html class="no-js" ang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>HACKNYU</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Lung Cancer Detection" />
+		<meta name="keywords" content="Lung Cancer Detection, Hackson, HACKNYU" />
+	  	
+	  	<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+		<!-- Flexslider -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+		<!-- Default Theme Style -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<!-- Modernizr JS -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+	</head>
+
+	<body>
+		<!-- Loader -->
+		<div class="fh5co-loader"></div>
+			
+		<div id="fh5co-page">
+			<section id="fh5co-header">
+				<div class="container">
+					<nav role="navigation">
+						<ul class="pull-left left-menu">
+							<li><a href="#">What</a></li>
+							<li><a href="#">Why</a></li>
+							<li><a href="#">How</a></li>
+						</ul>
+						<h1 id="fh5co-logo"><a href="{{url_for('main')}}">LCD<span>.</span></a></h1>
+						<ul class="pull-right right-menu">
+							<li><a href="#">Login</a></li>
+							<li class="fh5co-cta-btn"><a href="#">Sign up</a></li>
+						</ul>
+					</nav>
+				</div>	
+			</section>
+			<!-- #fh5co-header -->
+
+			<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(static/images/full_image_1.jpg);" data-next="yes">
+				<div class="fh5co-overlay"></div>
+				<div class="container">
+					<div class="fh5co-intro no-js-fullheight">
+						<div class="fh5co-intro-text">
+							<div class="fh5co-center-position">
+								{% if prob < 60%}
+									<h2 class="animate-box">Congratulations!</h2>
+									<h3 class="animate-box">You have very low risk of getting cancer. Stay healthy!</h3>
+								{%else%}
+									<h2 class="animate-box">Oops!</h2>
+									<h3 class="animate-box">You have {{ prob | round(2, 'floor')}} %  of risk getting cancer. </h3>
+								{%endif%}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fh5co-learn-more animate-box">
+					<a href="#" class="scroll-btn">
+						<span class="text">See more about yourself</span>
+						<span class="arrow"><i class="icon-chevron-down"></i></span>
+					</a>
+				</div>
+			</section>
+			<!-- END #fh5co-hero -->
+
+
+			<div id="fh5co-about">
+				<div class="container">
+					<div class="row row-bottom-padded-lg">
+						<div class="col-md-6">
+							{% if prob < 60%}
+									<figure class="animate-box">
+										<img src="{{ url_for('static', filename='images/health.jpg') }}" class="img-responsive">
+									</figure>
+								{%else%}
+									<figure class="animate-box">
+										<img src="{{ url_for('static', filename=path) }}" class="img-responsive">
+									</figure>
+							{%endif%}
+							
+						</div>
+						<div class="col-md-6">
+							{% if prob < 60%}
+								<h2 class="fh5co-label animate-box">Healthy tips</h2>
+								<ul class="fh5co-label animate-box">
+									<li><strong>Don't smoke.</strong> If you've never smoked, don't start. Talk to your children about not smoking so that they can understand how to avoid this major risk factor for lung cancer. Begin conversations about the dangers of smoking with your children early so that they know how to react to peer pressure.</li>
+									<li><strong>Stop smoking. </strong>Stop smoking now. Quitting reduces your risk of lung cancer, even if you've smoked for years. Talk to your doctor about strategies and stop-smoking aids that can help you quit. Options include nicotine replacement products, medications and support groups.</li>
+									<li><strong>Avoid secondhand smoke.</strong> If you live or work with a smoker, urge him or her to quit. At the very least, ask him or her to smoke outside. Avoid areas where people smoke, such as bars and restaurants, and seek out smoke-free options.</li>
+									<li><strong>Test your home for radon. </strong>Have the radon levels in your home checked, especially if you live in an area where radon is known to be a problem. High radon levels can be remedied to make your home safer. For information on radon testing, contact your local department of public health or a local chapter of the American Lung Association.</li>
+									<li><strong>Avoid carcinogens at work.</strong> Take precautions to protect yourself from exposure to toxic chemicals at work. Follow your employer's precautions. For instance, if you're given a face mask for protection, always wear it. Ask your doctor what more you can do to protect yourself at work. Your risk of lung damage from workplace carcinogens increases if you smoke.</li>
+									<li><strong>Eat a diet full of fruits and vegetables.</strong> Choose a healthy diet with a variety of fruits and vegetables. Food sources of vitamins and nutrients are best. Avoid taking large doses of vitamins in pill form, as they may be harmful. For instance, researchers hoping to reduce the risk of lung cancer in heavy smokers gave them beta carotene supplements. Results showed the supplements actually increased the risk of cancer in smokers.</li>
+									<li><strong>Exercise most days of the week. </strong>If you don't exercise regularly, start out slowly. Try to exercise most days of the week.</li>
+								</ul>
+								<p class="fh5co-sub-lead animate-box"></p>
+							{%else%}
+								<h2 class="fh5co-lead animate-box ">Attention</h2>
+								<h4 class="fh5co-label animate-box">The red areas have the highest risk of getting cancer. Please go to doctors to have a throughtout diagnoisement. </h4>
+								<p class="fh5co-sub-lead animate-box"></p>
+							{%endif%}
+
+							
+						</div>
+					</div>
+			<footer id="fh5co-footer">
+				<div class="container">
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Company</h3>
+								<ul class="fh5co-links">
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Feature Tour</a></li>
+									<li><a href="#">Pricing</a></li>
+									<li><a href="#">Business</a></li>
+									<li><a href="#">Our Team</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Support</h3>
+								<ul class="fh5co-links">
+									<li><a href="#">Knowledge Base</a></li>
+									<li><a href="#">24/7 Call Support</a></li>
+									<li><a href="#">Video Demos</a></li>
+									<li><a href="#">Terms of Use</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Contact Us</h3>
+								<p>
+									<a href="yg1053@nyu.edu"></a> yg1053@nyu.edu<br>
+									6 MetroTech Center,<br>
+									Brooklyn, NY 11201<br>
+									<a href="tel:+123456789">+1 (234) 5678901</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+							<div class="fh5co-footer-widget">
+								<h3>Follow Us</h3>
+								<ul class="fh5co-social">
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-google-plus"></i></a></li>
+									<li><a href="#"><i class="icon-instagram"></i></a></li>
+									<li><a href="#"><i class="icon-youtube-play"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+				<div class="fh5co-copyright animate-box">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="fh5co-left"><small>&copy; 2017 <a href="index.html">HACKNYU</a> LCD. All Rights Reserved.</small></p>
+								<p class="fh5co-right"><small class="fh5co-right">Lung Cancer Detection<a href="#" target="_blank" title="HACKNYU"> HACKNYU</a> - Made by <a href="#" title="HACKNYU" target="_blank">Winner</a></small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- END #fh5co-footer -->
+		</div>
+		<!-- END #fh5co-page -->
+		
+		<!-- jQuery -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+		<!-- jQuery Easing -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+		<!-- Bootstrap -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+		<!-- Waypoints -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
+		<!-- Flexslider -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.flexslider-min.js')}}"></script>
+		<!-- Magnific Popup -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+		<script type=text/javascript src="{{ url_for('static', filename='js/magnific-popup-options.js')}}"></script>
+		<!-- Main JS (Do not remove) -->
+		<script type=text/javascript src="{{ url_for('static', filename='js/main.js')}}"></script>
+	</body>
+</html>
+
